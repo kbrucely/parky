@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace parkyapi.Models
 {
     public class NationalPark
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     {
         [Key]
         public int Id { get; set; }
@@ -17,4 +18,5 @@ namespace parkyapi.Models
         public DateTime Created { get; set; }
         public DateTime Established { get; set; }
     }
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 }
