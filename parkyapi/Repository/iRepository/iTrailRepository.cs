@@ -16,5 +16,6 @@ namespace parkyapi.Repository.iRepository
         bool UpdateTrail(Trail trail);
         bool DeleteTrail(Trail trail);
         bool Save();
+        ICollection<Trail> GetTrailsInNationalPark(int npId);
     }
 }
