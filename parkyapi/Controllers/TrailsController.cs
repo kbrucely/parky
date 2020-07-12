@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using parkyapi.Models;
@@ -78,6 +79,7 @@ namespace parkyapi.Controllers_trailRepo
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesDefaultResponseType]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetTrail(int trailId)
         {
             var obj = _trailRepo.GetTrail(trailId);
